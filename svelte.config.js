@@ -7,10 +7,12 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: '200.html'
+			fallback: '200.html',
+			precompress: false,
+			strict: true
 		}),
 		paths: {
-			base: '/idle-schedule'
+			base: process.env.NODE_ENV === 'production' ? '/your-repo-name' : ''
 		}
 	}
 };
