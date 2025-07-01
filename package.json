@@ -44,6 +44,7 @@
 		]
 	},
 	"dependencies": {
-		"@fontsource-variable/caveat": "^5.2.6"
+		"@fontsource-variable/caveat": "^5.2.6",
+		"@sveltejs/adapter-netlify": "^5.0.2"
 	}
 }
