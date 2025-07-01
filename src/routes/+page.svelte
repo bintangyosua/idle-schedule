@@ -15,7 +15,6 @@
 
 			body {
 				font-family: 'Inter', sans-serif;
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 				min-height: 100vh;
 				display: flex;
 				align-items: center;
@@ -24,11 +23,9 @@
 			}
 
 			.schedule-container {
-				background: rgba(255, 255, 255, 0.95);
 				backdrop-filter: blur(20px);
 				border-radius: 30px;
 				padding: 40px;
-				box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
 				max-width: 900px;
 				width: 100%;
 				position: relative;
@@ -115,29 +112,31 @@
 
 			.play-button {
 				cursor: pointer;
-				transition: all 0.3s ease;
-				animation: pulse 2s infinite;
+				transition: transform 0.25s ease;
+				animation: subtlePulse 3s ease-in-out infinite;
+				transform-origin: center;
 			}
 
 			.play-button:hover {
 				transform: scale(1.1);
 			}
 
-			@keyframes pulse {
+			@keyframes subtlePulse {
 				0%,
 				100% {
-					transform: scale(1);
+					filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.1));
 				}
 				50% {
-					transform: scale(1.05);
+					filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
 				}
 			}
 
 			.play-label {
-				font-size: 1.4em;
-				font-weight: 700;
-				fill: #2d3748;
-				font-family: 'Caveat', cursive;
+				font-size: 1.6em;
+				font-weight: 600;
+				fill: #edf2f4;
+				font-family: 'Inter', 'Segoe UI', sans-serif;
+				letter-spacing: 1px;
 				pointer-events: none;
 			}
 
@@ -521,15 +520,7 @@
 
 				<!-- Center Button -->
 				<g class="play-button">
-					<circle
-						cx="250"
-						cy="250"
-						r="40"
-						fill="url(#centerGradient)"
-						stroke="#ffa000"
-						stroke-width="3"
-						filter="url(#glow)"
-					/>
+					<circle cx="250" cy="250" r="42" fill="#2b2d42" stroke="#8d99ae" stroke-width="3" />
 					<text x="250" y="250" text-anchor="middle" dominant-baseline="middle" class="play-label"
 						>PLAY</text
 					>
