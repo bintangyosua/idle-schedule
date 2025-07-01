@@ -28,7 +28,7 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: '/${{ github.event.repository.name }}'
+          BASE_PATH: '/idle-schedule'
         run: |
           pnpm run build
           touch build/.nojekyll
